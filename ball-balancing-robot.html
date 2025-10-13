@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2 axis Ball Balancing Robot</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Project Specific Styles (Consistent Dark Mode) */
+        .project-detail-section {
+            background-color: var(--card-bg);
+            padding: 40px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+            margin-bottom: 40px;
+        }
+        .project-detail-section h2 {
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+            margin-top: 0;
+            color: var(--primary-color);
+        }
+        .project-detail-section h3 {
+            color: var(--secondary-color);
+        }
+        .tech-stack {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .tech-stack li {
+            background-color: var(--bg-color);
+            color: var(--secondary-color);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 600;
+        }
+        /* Style for the media placeholders */
+        .media-placeholder {
+            height: 400px;
+            background-color: var(--bg-color);
+            border: 1px dashed var(--secondary-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+            margin-bottom: 30px;
+            color: var(--secondary-color);
+            overflow: hidden; /* Ensures media doesn't spill out */
+        }
+        .media-placeholder img,
+        .media-placeholder video {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain; /* Ensures the media fits without cropping */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>2 axis Ball Balancing Robot</h1>
+        <p>Stable position holding using a dual PID controller on a moving surface.</p>
+    </header>
+
+    <main>
+        <section class="project-detail-section">
+            <h2>Project Overview: Stabilizing a Electromechanical System</h2>
+            <p>This project involved designing and implementing a 2-axis Ball and Plate System to continuously balance a ball at a set point. The core challenge was achieving stable position holding on a dynamic, moving surface despite external disturbances. This system serves as a powerful demonstration of closed-loop control in a complex electromechanical environment.</p>
+
+            <div class="media-placeholder">
+                <img src="robot_prototype.jpg" alt="2-axis Ball Balancing Robot Prototype" title="2-axis Ball Balancing Robot Prototype">
+            </div>
+
+            <h3>Implementation Details</h3>
+            <p>To manage the system, a **dual PID controller** was designed and precisely tuned to maintain the ball at the set point. This was essential for effectively stabilizing the 2-axis platform against disturbances.</p>
+
+            <p>The core control logic was developed using **Arduino C++** firmware, specifically to manage the two independent stabilization loops: **Pitch and Roll**.</p>
+            
+            <p>For sensing and feedback, **proximity sensors** were utilized to continuously monitor the ball's position, providing the necessary real-time feedback signal to the microcontroller. The platform's tilt movements (X and Y) were accurately actuated by integrating **high-precision stepper motors** via dedicated drivers.</p>
+
+            <p>This comprehensive approach successfully demonstrated the control of a complex electromechanical system, achieving **stable position holding** on the moving surface.</p>
+
+            <div class="media-placeholder">
+                <video controls autoplay loop muted>
+                    <source src="robot_video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <h3>Technology Stack (Components Used)</h3>
+            <ul class="tech-stack">
+                <li>Arduino Microcontroller</li>
+                <li>Stepper Motors</li>
+                <li>Proximity Sensors</li>
+                <li>Power Supply</li>
+                <li>LCD Display</li>
+                <li>Jumper Wires</li>
+                <li>Breadboard</li>
+            </ul>
+            
+        </section>
+
+        <div class="back-link">
+            <a href="index.html">&larr; Back to All Projects</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 premadeprojects</p>
+    </footer>
+
+    <script>
+        // --- Dynamic Footer Year ---
+        document.querySelector('footer p').innerHTML = '&copy; ' + new Date().getFullYear() + ' Aung Kaung Myat';
+    </script>
+
+</body>
+</html>

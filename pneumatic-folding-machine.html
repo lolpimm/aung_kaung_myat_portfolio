@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pneumatic Folding Machine Project</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Project Specific Styles (Consistent Dark Mode) */
+        .project-detail-section {
+            background-color: var(--card-bg);
+            padding: 40px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+            margin-bottom: 40px;
+        }
+        .project-detail-section h2 {
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+            margin-top: 0;
+            color: var(--primary-color);
+        }
+        .project-detail-section h3 {
+            color: var(--secondary-color);
+        }
+        .tech-stack {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .tech-stack li {
+            background-color: var(--bg-color);
+            color: var(--secondary-color);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 600;
+        }
+        /* Style for the media placeholders */
+        .media-placeholder {
+            height: 400px;
+            background-color: var(--bg-color);
+            border: 1px dashed var(--secondary-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+            margin-bottom: 30px;
+            color: var(--secondary-color);
+            overflow: hidden; /* Ensures media doesn't spill out */
+        }
+        .media-placeholder img,
+        .media-placeholder video {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain; /* Ensures the media fits without cropping */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Pneumatic Folding Machine</h1>
+        <p>A functional prototype for rapid, consistent shirt folding.</p>
+    </header>
+
+    <main>
+        <section class="project-detail-section">
+            <h2>Project Overview: Mechanical Design and Sequential Control</h2>
+            <p>This project successfully designed and fabricated a functional prototype for a pneumatic folding machine, managing the entire process from the initial concept phase to final assembly. The primary goal was to create a solution capable of reliable, automated sequencing for rapid and consistent shirt folding.</p>
+
+            <div class="media-placeholder">
+                <img src="folding_machine_prototype.jpg" alt="Pneumatic Folding Machine Prototype" title="Pneumatic Folding Machine Prototype">
+            </div>
+
+            <h3>Implementation and Control</h3>
+            <p>The system required the development and integration of diverse mechanical mechanisms to achieve complex, precise folding movements. Key components included a **pinion and rack system** and a **pulley and gear mechanism**.</p>
+            
+            <p>The core control system was engineered from scratch, utilizing **pneumatic pistons** for actuation and **electrical relays** to manage the sequential timing and operation of all folding arms. This approach ensured the machine's control logic was robust and reliable for automated operation.</p>
+            
+            <p>The project was a comprehensive demonstration of applied mechatronics, combining mechanical design, electrical control, and sequencing logic. The working prototype and its underlying engineering principles were successfully presented at the National Academic Engineering Conference.</p>
+
+
+            <h3>Recognition</h3>
+            <div class="media-placeholder" style="height: auto; max-height: 500px; padding: 20px;">
+                <img src="engineering_certificate.jpg" alt="Certificate from National Academic Engineering Conference" title="National Academic Engineering Conference Presentation">
+            </div>
+            
+
+            <h3>Result</h3>
+            <p>The final prototype demonstrated reliable, automated sequencing, successfully folding shirts rapidly and consistently. The design proves proficiency in integrating mechanical systems with fundamental electrical control for industrial automation applications.</p>
+
+            <div class="media-placeholder">
+                <video controls autoplay loop muted>
+                    <source src="folding_machine_video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+
+            <h3>Technology Stack (Components Used)</h3>
+<ul class="tech-stack">
+    <li>Pneumatic Cylinders</li>
+    <li>Pneumatic Valves</li>
+    <li>Air Hoses</li>
+    <li>Electrical Relays</li>
+    <li>Arduino Microcontroller</li>
+    <li>Pinion and Rack System (Mechanism)</li>
+    <li>Pulley and Gear (Mechanism)</li>
+</ul>
+            
+        </section>
+
+        <div class="back-link">
+            <a href="index.html">&larr; Back to All Projects</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 premadeprojects</p>
+    </footer>
+
+    <script>
+        // --- Dynamic Footer Year ---
+        document.querySelector('footer p').innerHTML = '&copy; ' + new Date().getFullYear() + ' Aung Kaung Myat';
+    </script>
+
+</body>
+</html>

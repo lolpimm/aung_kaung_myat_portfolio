@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aung Kaung Myat | Mechatronics Portfolio</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* New style for the simplified project list */
+        .project-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .project-list li {
+            background-color: var(--card-bg);
+            border-left: 5px solid var(--primary-color); /* Highlight with the accent color */
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+            transition: transform 0.3s ease;
+        }
+
+        .project-list li:hover {
+            transform: translateX(5px);
+        }
+
+        .project-list li a {
+            text-decoration: none;
+            color: var(--accent-color); /* White text */
+            font-weight: 600;
+            display: block;
+            font-size: 1.1em;
+        }
+
+        .project-list li a:hover {
+            color: var(--primary-color); /* Aqua on hover */
+        }
+        
+        /* Ensure H2 titles are prominent */
+        h2 {
+            color: var(--accent-color);
+        }
+        /* Style for the 'Learn More' button which was missing in the previous version */
+        .cta-button {
+            background-color: var(--primary-color); /* Uses vibrant accent */
+            color: var(--bg-color); /* Dark text on bright button */
+            display: inline-block;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0, 229, 255, 0.4);
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 229, 255, 0.6);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Aung Kaung Myat | Portfolio</h1>
+        <p>Mechatronics and Artificial Intelligence Engineering</p>
+    </header>
+
+    <main>
+        
+        <section class="about-intro">
+            <h2>Hi, I'm Aung Kaung Myat 👋</h2>
+            <p>
+                I am a Mechatronics and Artificial Engineer specializing in system automation and control.My core competencies include **Control Systems theory** and **PLC programming**, supported by basic proficiency in **SolidWorks** and **AutoCAD**.
+            </p>
+            <p>
+                I have proven capability in boosting team efficiency by integrating and leveraging modern AI tools within technical workflows. The projects below demonstrate my skills in combining mechanical design, electrical control, and software development for reliable automation.
+            </p>
+        </section>
+        
+        <hr style="border: 0; height: 1px; background-image: linear-gradient(to right, rgba(0, 229, 255, 0), rgba(0, 229, 255, 0.75), rgba(0, 229, 255, 0)); margin: 40px 0;">
+
+
+        <h2>Engineering Projects</h2>
+        
+        <ul class="project-list">
+            <li>
+                <a href="ball-balancing-robot.html">
+                    2 axis Ball Balancing Robot (Project) 
+                </a>
+            </li>
+            <li>
+                <a href="pneumatic-folding-machine.html">
+                    Pneumatic Folding Machine (Project)
+                </a>
+            </li>
+            <li>
+                <a href="vibratory-feeder-system.html">
+                    Automated Vibratory Feeder System (Internship Experience)
+                </a>
+            </li>
+        </ul>
+        </main>
+
+    <footer>
+        <p>&copy; <script>document.write(new Date().getFullYear())</script> Aung Kaung Myat</p>
+    </footer>
+
+</body>
+</html>

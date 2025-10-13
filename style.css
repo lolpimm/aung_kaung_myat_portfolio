@@ -1,0 +1,332 @@
+/* --- 1. Custom Properties (Variables for easy color changes) --- */
+:root {
+    /* ------------------- NEW DARK MODE PALETTE ------------------- */
+    --primary-color: #00E5FF; /* Bright Cyan/Aqua - High-impact contrast */
+    --secondary-color: #94A6B6; /* Soft Blue-Gray - Secondary text/accents */
+    --accent-color: #FFFFFF; /* Pure White - Main headings and primary text */
+    --bg-color: #121212; /* Deep Charcoal - Your chosen background */
+    --card-bg: #1D1D1D; /* Dark Gray - Project card/Form background */
+    --dark-text: #A9A9A9; /* Soft Gray - Paragraph text color */
+    
+    --success-color: #2ecc71; /* Slightly lighter green for contrast */
+    --error-color: #e74c3c;   /* Red */
+    --border-radius: 8px;
+}
+
+/* --- 2. General Styles & New Font --- */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.7;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color); /* NEW */
+    color: var(--dark-text); /* NEW */
+}
+
+main {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* --- Mobile Responsiveness for Main Content --- */
+@media (max-width: 768px) {
+    main {
+        margin: 20px auto;
+        padding: 0 15px;
+    }
+}
+
+/* ------------------------------------- */
+/* --- 3. Header & Navigation Styles --- */
+/* ------------------------------------- */
+header {
+    /* NEW: Solid color header for stark contrast against the black background */
+    background-color: var(--card-bg);
+    color: var(--accent-color);
+    padding: 2rem 0;
+    text-align: center;
+    border-bottom: 5px solid var(--primary-color); /* Uses vibrant accent */
+}
+
+header h1 {
+    margin: 0 0 5px 0;
+    font-weight: 700;
+    color: var(--primary-color); /* Uses vibrant accent */
+}
+
+header p {
+    color: var(--secondary-color); /* Uses soft gray */
+}
+
+/* Header Navigation Styles (Animated Underline) */
+.main-nav {
+    margin-top: 15px;
+}
+
+.main-nav a {
+    color: var(--accent-color); /* White text */
+    text-decoration: none;
+    font-weight: 600;
+    margin: 0 15px;
+    padding-bottom: 3px;
+    position: relative; 
+}
+
+/* This is the line that grows */
+.main-nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--primary-color); /* Vibrant underline */
+    transition: width 0.3s ease-out; 
+}
+
+.main-nav a:hover::after {
+    width: 100%;
+}
+
+/* Animated Text Glow for Navigation Links */
+@keyframes pulseGlow {
+    0%, 100% { text-shadow: 0 0 5px rgba(0, 229, 255, 0.4); } /* Aqua Glow */
+    50% { text-shadow: 0 0 8px rgba(0, 229, 255, 0.7); }
+}
+
+.main-nav a:hover {
+    color: var(--primary-color); /* Text color changes to vibrant accent */
+    animation: pulseGlow 1.5s infinite alternate;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 60px;
+    color: var(--dark-text);
+    font-size: 0.9em;
+}
+
+/* ------------------------------------- */
+/* --- 4. Project Grid & Cards --- */
+/* ------------------------------------- */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.project-card {
+    background-color: var(--card-bg); /* NEW */
+    border: 1px solid var(--bg-color); /* Border almost disappears */
+    border-radius: var(--border-radius);
+    padding: 25px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4); /* Darker shadow for visibility */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    /* Animation Properties for Staggered Fade-Up */
+    opacity: 0;
+    animation: fadeUp 0.6s ease-out forwards;
+}
+
+/* Staggered load effect for each project card */
+.project-card:nth-child(1) { animation-delay: 0.1s; }
+.project-card:nth-child(2) { animation-delay: 0.2s; }
+.project-card:nth-child(3) { animation-delay: 0.3s; }
+.project-card:nth-child(4) { animation-delay: 0.4s; }
+.project-card:nth-child(5) { animation-delay: 0.5s; }
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+    border: 1px solid var(--primary-color); /* Visual focus on hover */
+}
+
+.project-card h3 {
+    margin-top: 0;
+    color: var(--primary-color); /* Uses vibrant accent */
+    font-weight: 600;
+}
+
+.project-card a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+/* ------------------------------------- */
+/* --- 5. CTA Button & Form Backgrounds --- */
+/* ------------------------------------- */
+@keyframes subtlePulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.015); }
+    100% { transform: scale(1); }
+}
+
+.custom-request-section {
+    text-align: center;
+    margin: 60px 0;
+    padding: 40px;
+    background: var(--card-bg); /* NEW */
+    border-radius: var(--border-radius);
+}
+
+.cta-button {
+    background-color: var(--primary-color); /* Uses vibrant accent */
+    color: var(--bg-color); /* Dark text on bright button */
+    
+    display: inline-block;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 229, 255, 0.4); /* Glow shadow */
+    transition: all 0.3s ease;
+    animation: subtlePulse 3s infinite ease-in-out;
+}
+
+.cta-button:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 229, 255, 0.6);
+    animation: none;
+}
+
+/* ------------------------------------- */
+/* --- 6. Form Styles & Validation --- */
+/* ------------------------------------- */
+.request-form {
+    background-color: var(--card-bg); /* NEW */
+    padding: 40px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3); /* Darker shadow */
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--secondary-color);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--bg-color); /* Input fields are almost black */
+    color: var(--accent-color); /* White text in the inputs */
+    border: 1px solid var(--bg-color);
+    border-radius: var(--border-radius);
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color); /* Vibrant accent border */
+    box-shadow: 0 0 0 3px rgba(0, 229, 255, 0.3); /* Vibrant accent glow */
+}
+
+/* Validation Feedback Styles */
+.form-group input.invalid {
+    border-color: var(--error-color);
+}
+
+.form-group input.valid {
+    border-color: var(--success-color);
+}
+
+.validation-message {
+    display: block;
+    margin-top: 5px;
+    font-size: 0.9em;
+    font-weight: 600;
+}
+
+.form-group input.invalid ~ .validation-message {
+    color: var(--error-color);
+}
+
+.form-group input.valid ~ .validation-message {
+    color: var(--success-color);
+}
+
+/* ------------------------------------- */
+/* --- 7. Back Link (Animated Underline) --- */
+/* ------------------------------------- */
+.back-link {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 1.1em;
+}
+
+.back-link a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: 600;
+    position: relative;
+}
+
+.back-link a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease-out;
+}
+
+.back-link a:hover::after {
+    width: 100%;
+}
+
+/* ------------------------------------- */
+/* --- 8. About Introduction on Index Page (NEW) --- */
+/* ------------------------------------- */
+.about-intro {
+    background-color: var(--card-bg); /* Use the card dark background */
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    margin-bottom: 40px;
+}
+
+.about-intro h2 {
+    color: var(--primary-color); /* Bright accent for the main heading */
+    font-weight: 700;
+    margin-top: 0;
+}
+
+.about-intro p {
+    margin-bottom: 15px;
+}
