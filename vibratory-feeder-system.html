@@ -52,6 +52,30 @@
             margin-top: 20px;
             margin-bottom: 30px;
             color: var(--secondary-color);
+            overflow: hidden; 
+        }
+        .media-placeholder img,
+        .media-placeholder video {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain; 
+        }
+        
+        /* NEW STYLE FOR SIDE-BY-SIDE IMAGES */
+        .media-row {
+            display: flex;
+            gap: 10px; /* Space between images */
+            margin-top: 20px;
+            margin-bottom: 30px;
+            height: 400px; 
+        }
+        .media-row .media-placeholder {
+            flex: 1; /* Makes both placeholders take up equal space */
+            margin: 0; /* Remove redundant margin */
+            height: 100%;
+        }
+        .media-row img {
+            object-fit: cover; /* Fills the space nicely */
         }
     </style>
 </head>
@@ -70,29 +94,43 @@
     <main>
         <section class="project-detail-section">
             <h2>Experience Overview: Industrial Automation Internship</h2>
-            <p>During my internship, I was tasked with designing an automated **vibratory feeder system** to replace the manual loading of parts onto a CNC machine, focusing on improving process efficiency and reliability in a manufacturing environment.</p>
+            <p>During my internship at **Micro Precision**, I was tasked with designing the **automated vibratory feeder system** to replace the manual loading of parts onto a CNC machine. The goal was to improve process efficiency and reliability in a manufacturing environment by achieving a consistent, automated part feeding cycle.</p>
 
-            <div class="media-placeholder">
-                [Space for Feeder System Diagram or Installation Photo]
+            <div class="media-row">
+                <div class="media-placeholder">
+                    <img src="team_factory_photo.jpg" alt="Internship Team Photo in Factory" title="Internship Team Photo in Factory">
+                </div>
+                <div class="media-placeholder">
+                    <img src="team_office_photo.jpg" alt="Internship Team Photo in Office" title="Internship Team Photo in Office">
+                </div>
             </div>
 
             <h3>Key Contributions</h3>
             <ul>
-                <li>**Component Sourcing:** Selected and sourced all necessary components, including motors, electrical controls, and specialized parts from online vendors.</li>
-                <li>**Sensing and Feedback:** Integrated various sensors to monitor the part sequence and provide essential **real-time feedback** to the system microcontroller.</li>
+                <li>**Component Sourcing:** Selected and sourced all components, including motors, electrical controls, and specialized parts from online vendors.</li>
+                <li>**Sensing and Feedback:** Integrated various sensors to monitor the part sequence and provide essential **real-time feedback** to the system.</li>
                 <li>**Assembly:** Successfully assembled all mechanical and electrical subsystems for the feeder prototype.</li>
                 <li>**Programming:** Controlled the entire sequence using **sensor programming** to manage the automated part feeding cycle precisely.</li>
             </ul>
 
+            <h3>Result</h3>
+            <p>The successful prototype directly replaced manual labor, automating the part feeding process and ensuring reliable, consistent delivery of parts to the CNC machine. This improved overall production throughput and demonstrated proficiency in developing turn-key industrial automation solutions.</p>
+
+
             <div class="media-placeholder">
-                [Space for Sensor or Control Panel Photo]
+                <video controls autoplay loop muted>
+                    <source src="feeder_system_video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
             </div>
 
-            <h3>Technology Stack</h3>
+            <h3>Technology Stack (Components Used)</h3>
             <ul class="tech-stack">
+                <li>PLC or Microcontroller</li>
+                <li>Vibratory Motors & Drive System</li>
                 <li>Electrical Controls</li>
-                <li>Vibratory Motors</li>
                 <li>Proximity/Optical Sensors</li>
+                <li>Custom Mechanical Assembly</li>
             </ul>
             
         </section>
